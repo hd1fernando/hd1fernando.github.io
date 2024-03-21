@@ -94,9 +94,11 @@ app.MapGet("/contagem-pessoas", (AppDbContext dbContext) =>
 });
 
 app.Run();
+```
 
 Criei também um arquivo docker-compose para executar o banco de dados:
 
+```
 version: '3.4'
 
 services:
@@ -116,5 +118,6 @@ services:
 volumes:
   db:
     driver: local
+```
 
 Até então, a API está funcionando normalmente, atendendo a todas as restrições sugeridas. Nos próximos dias, vou tentar criar a infraestrutura para execução dos testes de carga.
