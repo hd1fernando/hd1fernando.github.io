@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>johndoe</title>
+    <link>http://www.example.com/</link>
+    <description>Recent content on johndoe</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 May 2025 23:20:15 -0300</lastBuildDate>
+    <atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test Data Builder com Bogus</title>
+      <link>http://www.example.com/posts/test-data-builder-with.bogus/</link>
+      <pubDate>Sat, 03 May 2025 23:20:15 -0300</pubDate>
+      <guid>http://www.example.com/posts/test-data-builder-with.bogus/</guid>
+      <description>&lt;h1 id=&#34;test-data-builder-com-bogus&#34;&gt;&#xA;  Test Data Builder com Bogus&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#test-data-builder-com-bogus&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h1&gt;</description>
+    </item>
+  </channel>
+</rss>
