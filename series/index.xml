@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Fernando Gonçalves</title>
-    <link>http://www.example.com/series/</link>
+    <link>https://hd1fernando.github.io/series/</link>
     <description>Recent content in Series on Fernando Gonçalves</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://www.example.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hd1fernando.github.io/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

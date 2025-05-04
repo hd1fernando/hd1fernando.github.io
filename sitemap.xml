@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://www.example.com/</loc>
+    <loc>https://hd1fernando.github.io/</loc>
     <lastmod>2025-05-03T23:20:15-03:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/posts/</loc>
+    <loc>https://hd1fernando.github.io/posts/</loc>
     <lastmod>2025-05-03T23:20:15-03:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/posts/test-data-builder-with.bogus/</loc>
+    <loc>https://hd1fernando.github.io/posts/test-data-builder-with.bogus/</loc>
     <lastmod>2025-05-03T23:20:15-03:00</lastmod>
   </url><url>
-    <loc>http://www.example.com/authors/</loc>
+    <loc>https://hd1fernando.github.io/authors/</loc>
   </url><url>
-    <loc>http://www.example.com/categories/</loc>
+    <loc>https://hd1fernando.github.io/categories/</loc>
   </url><url>
-    <loc>http://www.example.com/series/</loc>
+    <loc>https://hd1fernando.github.io/series/</loc>
   </url><url>
-    <loc>http://www.example.com/tags/</loc>
+    <loc>https://hd1fernando.github.io/tags/</loc>
   </url>
 </urlset>
