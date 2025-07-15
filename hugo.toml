@@ -1,0 +1,23 @@
+baseURL = 'https://hd1fernando.github.io/'
+languageCode = 'en-us'
+title = 'hd1Fernando'
+theme = 'typo'
+
+# Appearance settings
+colorPalette = 'default'
+hideHeader = false
+
+# Headers
+[[params.menu]]
+name = "posts"
+url = "/"
+
+[[params.menu]]
+name = "curriculo"
+url = "/cv"
+
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/hd1fernando/"
