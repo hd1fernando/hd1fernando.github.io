@@ -2,10 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on hd1Fernando</title>
-    <link>http://localhost:1313/</link>
+    <link>https://hd1fernando.github.io/</link>
     <description>Recent content in Home on hd1Fernando</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://hd1fernando.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recomendações</title>
+      <link>https://hd1fernando.github.io/recomenda%C3%A7%C3%B5es/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://hd1fernando.github.io/recomenda%C3%A7%C3%B5es/</guid>
+      <description>&lt;h2 class=&#34;heading&#34; id=&#34;livros&#34;&gt;&#xA;  Livros&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#livros&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;vídeos&#34;&gt;&#xA;  Vídeos&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#v%c3%addeos&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;estatística-aplicada-a-psicobiologia-i---2026&#34;&gt;&#xA;  Estatística aplicada a Psicobiologia I - 2026&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#estat%c3%adstica-aplicada-a-psicobiologia-i---2026&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/videoseries?list=PLZjaOxYREinu8_RXqEF6mdv6IS3-oAI_g&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;introdução-ao-pensamento-matemático&#34;&gt;&#xA;  Introdução ao Pensamento Matemático&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#introdu%c3%a7%c3%a3o-ao-pensamento-matem%c3%a1tico&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/videoseries?list=PLa_2246N48_pq6LfZsbUuwGuJicAUL8sb&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;artigos&#34;&gt;&#xA;  Artigos&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#artigos&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;posts&#34;&gt;&#xA;  Posts&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#posts&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;&#xA;&lt;h2 class=&#34;heading&#34; id=&#34;podcasts&#34;&gt;&#xA;  Podcasts&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#podcasts&#34;&gt;#&lt;/a&gt;&#xA;&lt;/h2&gt;</description>
+    </item>
   </channel>
 </rss>
