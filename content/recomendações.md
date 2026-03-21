@@ -1,6 +1,5 @@
 ---
 title: "Recomendações"
-date: 2024-01-01
 draft: false
 description: "Livros, artigos, posts e podcasts recomendados"
 ---
