@@ -26,6 +26,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="https://hd1fernando.github.io/android-chrome-192x192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="https://hd1fernando.github.io/apple-touch-icon.png">
 
+<link rel="alternate" type="application/rss+xml" href="https://hd1fernando.github.io/recomenda%C3%A7%C3%B5es/index.xml" title="hd1Fernando">
 <meta name="description" content="Livros, artigos, posts e podcasts recomendados"/>
 
 
@@ -43,7 +44,7 @@
   <meta property="og:title" content="Recomendações">
   <meta property="og:description" content="Livros, artigos, posts e podcasts recomendados">
   <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 
 
 
@@ -134,27 +135,74 @@
       
 
 
-
-
 <div class="breadcrumbs"><a href="/">Home</a><span class="breadcrumbs-separator">/</span>
         <a href="/recomenda%C3%A7%C3%B5es/">Recomendações</a></div>
 
 
-<div >
-  <article>
-    <header class="single-intro-container">
-        
-        <h1 class="single-title">Recomendações</h1>
-        
-        
-    </header>
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
     
-    <div class="single-content">
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+  
+
+
+<div class="cv-tabs-container" id="top">
+  <h1 class="single-title">Recomendações</h1>
+
+  <div class="cv-tabs">
+    <button class="cv-tab active" data-tab="livros">Livros</button>
+    <button class="cv-tab" data-tab="vídeos">Vídeos</button>
+    <button class="cv-tab" data-tab="artigos">Artigos</button>
+    <button class="cv-tab" data-tab="posts">Posts</button>
+    <button class="cv-tab" data-tab="podcasts">Podcasts</button>
+  </div>
+
+  <div class="cv-content">
+    <div id="livros" class="cv-panel active">
       <h2 class="heading" id="livros">
   Livros
   <a class="anchor" href="#livros">#</a>
 </h2>
-<h2 class="heading" id="vídeos">
+
+    </div>
+    <div id="vídeos" class="cv-panel">
+      <h2 class="heading" id="vídeos">
   Vídeos
   <a class="anchor" href="#v%c3%addeos">#</a>
 </h2>
@@ -168,42 +216,114 @@
   <a class="anchor" href="#introdu%c3%a7%c3%a3o-ao-pensamento-matem%c3%a1tico">#</a>
 </h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLa_2246N48_pq6LfZsbUuwGuJicAUL8sb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<h2 class="heading" id="artigos">
+    </div>
+    <div id="artigos" class="cv-panel">
+      <h2 class="heading" id="artigos">
   Artigos
   <a class="anchor" href="#artigos">#</a>
 </h2>
-<h2 class="heading" id="posts">
+
+    </div>
+    <div id="posts" class="cv-panel">
+      <h2 class="heading" id="posts">
   Posts
   <a class="anchor" href="#posts">#</a>
 </h2>
-<h2 class="heading" id="podcasts">
+
+    </div>
+    <div id="podcasts" class="cv-panel">
+      <h2 class="heading" id="podcasts">
   Podcasts
   <a class="anchor" href="#podcasts">#</a>
 </h2>
 
     </div>
-  </article>
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-  <div class="back-to-top">
-    <a href="#top">
-      back to top
-    </a>
   </div>
-  
-
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.cv-tab');
+  const panels = document.querySelectorAll('.cv-panel');
+  const container = document.querySelector('.cv-tabs-container');
+
+  function activateTab(tabName) {
+    tabs.forEach(tab => {
+      tab.classList.toggle('active', tab.dataset.tab === tabName);
+    });
+    panels.forEach(panel => {
+      panel.classList.toggle('active', panel.id === tabName);
+    });
+    if (container) container.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => activateTab(tab.dataset.tab));
+  });
+
+  if (window.location.hash) {
+    const hash = window.location.hash.substring(1);
+    const validTabs = ['livros', 'vídeos', 'artigos', 'posts', 'podcasts'];
+    if (validTabs.includes(hash)) activateTab(hash);
+  }
+});
+</script>
+
+<style>
+.cv-tabs-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cv-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--text-secondary);
+}
+
+.cv-tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  border-radius: 4px 4px 0 0;
+}
+
+.cv-tab:hover {
+  color: var(--text);
+  background: var(--bg-secondary);
+}
+
+.cv-tab.active {
+  color: var(--text);
+  background: var(--bg-secondary);
+  font-weight: 600;
+}
+
+.cv-content {
+  padding: 1rem 0;
+}
+
+.cv-panel {
+  display: none;
+}
+
+.cv-panel.active {
+  display: block;
+}
+
+.cv-panel iframe {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
+</style>
 
 
     </main>
