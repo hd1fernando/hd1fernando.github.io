@@ -1,0 +1,7 @@
+.single-content p,
+.cv-panel p,
+.cv-panel li,
+.recomendacoes-panel p,
+.recomendacoes-panel li {
+  text-align: justify;
+}
