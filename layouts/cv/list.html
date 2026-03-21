@@ -5,7 +5,7 @@
 {{ end }}
 
 {{ $pages := .Site.RegularPages }}
-{{ $completo := "" }}
+{{ $resumo := "" }}
 {{ $experiencia := "" }}
 {{ $educacao := "" }}
 {{ $reconhecimentos := "" }}
@@ -13,8 +13,8 @@
 {{ $idiomas := "" }}
 
 {{ range $pages }}
-  {{ if eq .File.Path "cv/completo.md" }}
-    {{ $completo = .Content }}
+  {{ if eq .File.Path "cv/resumo.md" }}
+    {{ $resumo = .Content }}
   {{ else if eq .File.Path "cv/experiencia.md" }}
     {{ $experiencia = .Content }}
   {{ else if eq .File.Path "cv/educacao.md" }}
@@ -32,7 +32,7 @@
   <h1 class="single-title">{{ .Title }}</h1>
 
   <div class="cv-tabs">
-    <button class="cv-tab active" data-tab="completo">Completo</button>
+    <button class="cv-tab active" data-tab="resumo">Resumo</button>
     <button class="cv-tab" data-tab="experiencia">Experiência</button>
     <button class="cv-tab" data-tab="educacao">Educação</button>
     <button class="cv-tab" data-tab="reconhecimentos">Reconhecimentos</button>
@@ -41,8 +41,8 @@
   </div>
 
   <div class="cv-content">
-    <div id="completo" class="cv-panel active">
-      {{ $completo | safeHTML }}
+    <div id="resumo" class="cv-panel active">
+      {{ $resumo | safeHTML }}
     </div>
     <div id="experiencia" class="cv-panel">
       {{ $experiencia | safeHTML }}
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (window.location.hash) {
     const hash = window.location.hash.substring(1);
-    const validTabs = ['completo', 'experiencia', 'educacao', 'reconhecimentos', 'projetos', 'idiomas'];
+    const validTabs = ['resumo', 'experiencia', 'educacao', 'reconhecimentos', 'projetos', 'idiomas'];
     if (validTabs.includes(hash)) activateTab(hash);
   }
 });

@@ -139,3 +139,4 @@ hugo --minify
 - Do NOT commit large binary files
 - Keep custom CSS minimal - consider using theme's built-in options
 - Test any changes locally before committing
+- **IMPORTANT**: Never run git commit or git push unless explicitly requested by the user
