@@ -10,7 +10,7 @@
   <h1 class="single-title">{{ .Title }}</h1>
 
   <div class="cv-tabs">
-    <button class="cv-tab active" data-tab="sobre">Sobre</button>
+    <button class="cv-tab active" data-tab="completo">Completo</button>
     <button class="cv-tab" data-tab="experiencia">Experiência</button>
     <button class="cv-tab" data-tab="educacao">Educação</button>
     <button class="cv-tab" data-tab="reconhecimentos">Reconhecimentos</button>
@@ -19,8 +19,10 @@
   </div>
 
   <div class="cv-content">
-    <div id="sobre" class="cv-panel active">
-      {{ .Content }}
+    <div id="completo" class="cv-panel active">
+      {{ with .Site.GetPage "/curriculo/completo" }}
+        {{ .Content }}
+      {{ end }}
     </div>
     <div id="experiencia" class="cv-panel">
       {{ with $.Site.GetPage "/curriculo/experiencia" }}
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (window.location.hash) {
     const hash = window.location.hash.substring(1);
-    const validTabs = ['sobre', 'experiencia', 'educacao', 'reconhecimentos', 'projetos', 'idiomas'];
+    const validTabs = ['completo', 'experiencia', 'educacao', 'reconhecimentos', 'projetos', 'idiomas'];
     if (validTabs.includes(hash)) activateTab(hash);
   }
 });
