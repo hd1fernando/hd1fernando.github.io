@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'hd1Fernando'
 theme = 'typo'
 
+[markup.goldmark.renderer]
+unsafe = true
+
 # Appearance settings
 colorPalette = 'default'
 hideHeader = false
@@ -16,6 +19,9 @@ url = "/"
 name = "curriculo"
 url = "/cv"
 
+[[params.menu]]
+name = "recomendações"
+url = "/recomendações"
 
 # Social icons
 [[params.social]]
