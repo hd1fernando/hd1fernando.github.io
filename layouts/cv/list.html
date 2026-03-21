@@ -1,9 +1,31 @@
 {{ define "main" }}
 
-{{/* Breadcrumbs */}}
-
 {{ if not .IsHome }}
 {{ partial "breadcrumbs.html" . }}
+{{ end }}
+
+{{ $pages := .Site.RegularPages }}
+{{ $completo := "" }}
+{{ $experiencia := "" }}
+{{ $educacao := "" }}
+{{ $reconhecimentos := "" }}
+{{ $projetos := "" }}
+{{ $idiomas := "" }}
+
+{{ range $pages }}
+  {{ if eq .File.Path "cv/completo.md" }}
+    {{ $completo = .Content }}
+  {{ else if eq .File.Path "cv/experiencia.md" }}
+    {{ $experiencia = .Content }}
+  {{ else if eq .File.Path "cv/educacao.md" }}
+    {{ $educacao = .Content }}
+  {{ else if eq .File.Path "cv/reconhecimentos.md" }}
+    {{ $reconhecimentos = .Content }}
+  {{ else if eq .File.Path "cv/projetos.md" }}
+    {{ $projetos = .Content }}
+  {{ else if eq .File.Path "cv/idiomas.md" }}
+    {{ $idiomas = .Content }}
+  {{ end }}
 {{ end }}
 
 <div class="cv-tabs-container" id="top">
@@ -20,34 +42,22 @@
 
   <div class="cv-content">
     <div id="completo" class="cv-panel active">
-      {{ with .Site.GetPage "/curriculo/completo" }}
-        {{ .Content }}
-      {{ end }}
+      {{ $completo | safeHTML }}
     </div>
     <div id="experiencia" class="cv-panel">
-      {{ with $.Site.GetPage "/curriculo/experiencia" }}
-        {{ .Content }}
-      {{ end }}
+      {{ $experiencia | safeHTML }}
     </div>
     <div id="educacao" class="cv-panel">
-      {{ with $.Site.GetPage "/curriculo/educacao" }}
-        {{ .Content }}
-      {{ end }}
+      {{ $educacao | safeHTML }}
     </div>
     <div id="reconhecimentos" class="cv-panel">
-      {{ with $.Site.GetPage "/curriculo/reconhecimentos" }}
-        {{ .Content }}
-      {{ end }}
+      {{ $reconhecimentos | safeHTML }}
     </div>
     <div id="projetos" class="cv-panel">
-      {{ with $.Site.GetPage "/curriculo/projetos" }}
-        {{ .Content }}
-      {{ end }}
+      {{ $projetos | safeHTML }}
     </div>
     <div id="idiomas" class="cv-panel">
-      {{ with $.Site.GetPage "/curriculo/idiomas" }}
-        {{ .Content }}
-      {{ end }}
+      {{ $idiomas | safeHTML }}
     </div>
   </div>
 </div>
