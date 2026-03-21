@@ -1,0 +1,131 @@
+{{ define "main" }}
+
+{{/* Breadcrumbs */}}
+
+{{ if not .IsHome }}
+{{ partial "breadcrumbs.html" . }}
+{{ end }}
+
+<div class="cv-tabs-container" id="top">
+  <h1 class="single-title">{{ .Title }}</h1>
+
+  <div class="cv-tabs">
+    <button class="cv-tab active" data-tab="sobre">Sobre</button>
+    <button class="cv-tab" data-tab="experiencia">Experiência</button>
+    <button class="cv-tab" data-tab="educacao">Educação</button>
+    <button class="cv-tab" data-tab="reconhecimentos">Reconhecimentos</button>
+    <button class="cv-tab" data-tab="projetos">Projetos</button>
+    <button class="cv-tab" data-tab="idiomas">Idiomas</button>
+  </div>
+
+  <div class="cv-content">
+    <div id="sobre" class="cv-panel active">
+      {{ .Content }}
+    </div>
+    <div id="experiencia" class="cv-panel">
+      {{ with $.Site.GetPage "/curriculo/experiencia" }}
+        {{ .Content }}
+      {{ end }}
+    </div>
+    <div id="educacao" class="cv-panel">
+      {{ with $.Site.GetPage "/curriculo/educacao" }}
+        {{ .Content }}
+      {{ end }}
+    </div>
+    <div id="reconhecimentos" class="cv-panel">
+      {{ with $.Site.GetPage "/curriculo/reconhecimentos" }}
+        {{ .Content }}
+      {{ end }}
+    </div>
+    <div id="projetos" class="cv-panel">
+      {{ with $.Site.GetPage "/curriculo/projetos" }}
+        {{ .Content }}
+      {{ end }}
+    </div>
+    <div id="idiomas" class="cv-panel">
+      {{ with $.Site.GetPage "/curriculo/idiomas" }}
+        {{ .Content }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.cv-tab');
+  const panels = document.querySelectorAll('.cv-panel');
+  const container = document.querySelector('.cv-tabs-container');
+
+  function activateTab(tabName) {
+    tabs.forEach(tab => {
+      tab.classList.toggle('active', tab.dataset.tab === tabName);
+    });
+    panels.forEach(panel => {
+      panel.classList.toggle('active', panel.id === tabName);
+    });
+    if (container) container.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => activateTab(tab.dataset.tab));
+  });
+
+  if (window.location.hash) {
+    const hash = window.location.hash.substring(1);
+    const validTabs = ['sobre', 'experiencia', 'educacao', 'reconhecimentos', 'projetos', 'idiomas'];
+    if (validTabs.includes(hash)) activateTab(hash);
+  }
+});
+</script>
+
+<style>
+.cv-tabs-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cv-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--text-secondary);
+}
+
+.cv-tab {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  border-radius: 4px 4px 0 0;
+}
+
+.cv-tab:hover {
+  color: var(--text);
+  background: var(--bg-secondary);
+}
+
+.cv-tab.active {
+  color: var(--text);
+  background: var(--bg-secondary);
+  font-weight: 600;
+}
+
+.cv-content {
+  padding: 1rem 0;
+}
+
+.cv-panel {
+  display: none;
+}
+
+.cv-panel.active {
+  display: block;
+}
+</style>
+
+{{ end }}
