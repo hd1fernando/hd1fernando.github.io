@@ -10,10 +10,6 @@ description: "Currículo de Fernando Souza Gonçalves - Engenheiro de Software"
 
 Belo Horizonte, MG
 
-Email: hd1.fernandosouza@gmail.com Linkedin:linkedin.com/in/hd1fernando/
-
-Telefone: +55 31 99484-0676 Github: github.com/hd1fernando
-
 Tenho experiência na área de desenvolvimento de software desde 2018. Recentemente tenho atuado na construção, migração e manutenção de aplicações web utilizando principalmente .NET com C# e SQL Server.
 
 ## Experiência
