@@ -1,0 +1,59 @@
+{{ define "main" }}
+
+{{ if not .IsHome }}
+{{ partial "breadcrumbs.html" . }}
+{{ end }}
+
+<div>
+  <article>
+    <header class="single-intro-container">
+      <h1 class="single-title">{{ .Title }}</h1>
+      {{- with .Param "summary" }}
+      <p class="single-summary">{{ . | markdownify }}</p>
+      {{- end }}
+      {{ with .Date }}
+      <p class="single-date">
+        <time datetime="{{ . | time.Format "2006-01-02T15:04:05-07:00" }}">{{ . | time.Format (default ":date_long" $.Site.Params.singleDateFormat) }}</time>
+      </p>
+      {{ end }}
+    </header>
+
+    <div class="single-content">
+      {{ .Content }}
+    </div>
+  </article>
+
+  <div class="lt-app">
+    <section class="card">
+      <div class="controls-row">
+        <label class="file-btn">
+          Carregar CSV
+          <input type="file" id="fileInput" accept=".csv,text/csv">
+        </label>
+        <span class="status" id="status" role="status">Nenhum arquivo carregado. Selecione um CSV para gerar a tábua.</span>
+      </div>
+      <div class="mapping-row" id="mappingRow" hidden>
+        <label>Tempo<select id="timeSelect"></select></label>
+        <label>Evento<select id="eventSelect"></select></label>
+        <label>Grupo<select id="groupSelect"></select></label>
+        <label>Intervalo<input type="number" id="intervalInput" min="1" step="1" value="1"></label>
+        <label>Unidade de tempo<input type="text" id="timeUnitInput" value="meses"></label>
+        <label>Evento (plural)<input type="text" id="eventNounInput" value="eventos"></label>
+        <button type="button" class="btn-secondary" id="recalcBtn">Recalcular</button>
+      </div>
+    </section>
+
+    <section class="card" id="sec" hidden>
+      <h2 id="tableTitle">Tábua de vida</h2>
+      <div class="chart-wrap"><canvas id="chart"></canvas></div>
+      <div class="tables-grid" id="tables"></div>
+    </section>
+
+    <section class="card narrative-section" id="narrativeSection" hidden>
+      <h2>Resultados</h2>
+      <div id="narrative"></div>
+    </section>
+  </div>
+</div>
+
+{{ end }}

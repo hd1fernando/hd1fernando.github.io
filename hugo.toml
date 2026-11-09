@@ -10,6 +10,10 @@ unsafe = true
 colorPalette = 'default'
 hideHeader = false
 
+[params]
+homeCollection = 'posts'
+homeCollectionTitle = 'Posts'
+
 # Headers
 [[params.menu]]
 name = "posts"

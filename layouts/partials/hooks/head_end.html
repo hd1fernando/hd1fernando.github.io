@@ -1,0 +1,6 @@
+{{ if and .IsPage .File (eq .File.BaseFileName "tabuadevida") }}
+{{ $css := resources.Get "css/life-table.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" media="all">
+{{ $js := resources.Get "js/life-table.js" | minify | fingerprint }}
+<script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ end }}
